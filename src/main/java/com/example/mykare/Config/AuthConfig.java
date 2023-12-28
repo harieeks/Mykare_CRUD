@@ -14,12 +14,11 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class AuthConfig {
 
-
-
     @Bean
     SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
 
         httpSecurity
+
                 .csrf((csrf) -> csrf.disable())
                 .authorizeHttpRequests(authorize ->authorize
                         .requestMatchers("/register","/authenticate","/hi","/users","/delete-user")

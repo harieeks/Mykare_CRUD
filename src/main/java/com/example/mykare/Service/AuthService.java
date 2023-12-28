@@ -45,8 +45,6 @@ public class AuthService {
                         request.getPassword()
                 )
         );
-        System.out.println("in auth");
-
         SecurityContextHolder.getContext().setAuthentication(authentication);
         System.out.println(SecurityContextHolder.getContext()+"hai....");
     }
